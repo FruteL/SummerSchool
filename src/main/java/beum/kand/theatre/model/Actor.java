@@ -10,6 +10,8 @@ public class Actor {
     private String surname;
     private String rank;
     private int expYear;
+    private LocalDateTime createAt;
+    private LocalDateTime updateAt;
 
     public Actor() {
     }
@@ -21,6 +23,17 @@ public class Actor {
         this.surname = surname;
         this.rank = rank;
         this.expYear = expYear;
+    }
+
+    public Actor(String id, String firstName, String secondName, String surname, String rank, int expYear, LocalDateTime createAt, LocalDateTime updateAt) {
+        this.id = id;
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.surname = surname;
+        this.rank = rank;
+        this.expYear = expYear;
+        this.createAt = createAt;
+        this.updateAt = updateAt;
     }
 
     public String getId() {
@@ -69,6 +82,22 @@ public class Actor {
 
     public void setExpYear(int expYear) {
         this.expYear = expYear;
+    }
+
+    public LocalDateTime getCreateAt() {
+        return createAt;
+    }
+
+    public void setCreateAt(LocalDateTime createAt) {
+        this.createAt = createAt;
+    }
+
+    public LocalDateTime getUpdateAt() {
+        return updateAt;
+    }
+
+    public void setUpdateAt(LocalDateTime updateAt) {
+        this.updateAt = updateAt;
     }
 
     @Override

@@ -1,4 +1,4 @@
-package beum.kand.theatre.repository;
+package beum.kand.theatre.repository.item;
 
 import beum.kand.theatre.model.Item;
 import org.springframework.stereotype.Repository;

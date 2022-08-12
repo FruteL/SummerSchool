@@ -23,6 +23,7 @@ public class ItemRestController {
     public Item showOne(@PathVariable String id){
         return service.get(id);
     }
+
     @DeleteMapping("/{id}")
     public void del(@PathVariable String id){
         service.delete(id);
@@ -32,10 +33,13 @@ public class ItemRestController {
     public Item insertOne(@RequestBody Item item){
         return service.create(item);
     }
-
     @PutMapping()
-    public Item update(@RequestBody Item item){
+    public Item updateOne(@RequestBody Item item){
         return service.update(item);
     }
+
+
+
+
 
 }

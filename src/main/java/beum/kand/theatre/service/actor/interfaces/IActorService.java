@@ -1,4 +1,4 @@
-package beum.kand.theatre.service.item.interfaces;
+package beum.kand.theatre.service.actor.interfaces;
 
 import beum.kand.theatre.model.Actor;
 
