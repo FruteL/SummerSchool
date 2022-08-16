@@ -1,17 +1,11 @@
-package beum.kand.theatre.service.perfomance.impls;
+package beum.kand.theatre.service.role.impls;
 
 import beum.kand.theatre.model.Role;
-import beum.kand.theatre.repository.item.ItemMongoRepository;
-import beum.kand.theatre.repository.role.RoleMongoRepository;
 import beum.kand.theatre.service.role.interfaces.IRoleService;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
-public class PerformanceServiceImpl implements IRoleService {
-
-    @Autowired
-    RoleMongoRepository repository;
+public class RoleServiceImpl implements IRoleService {
     @Override
     public Role create(Role role) {
         return null;

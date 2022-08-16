@@ -4,10 +4,11 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Contract  {
+
+    private String id;
     private Actor actor;
     private Role role;
     private int YearPayment;
-    private int countingOfActing;
     private double bonus;
     private LocalDateTime createAt;
     private LocalDateTime updateAt;
@@ -15,13 +16,22 @@ public class Contract  {
     public Contract() {
     }
 
-    public Contract(Actor actor, Role role, int yearPayment, int countingOfActing, LocalDateTime createAt, LocalDateTime updateAt) {
+    public Contract(String id, Actor actor, Role role, int yearPayment, double bonus, LocalDateTime createAt, LocalDateTime updateAt) {
+        this.id = id;
         this.actor = actor;
         this.role = role;
         YearPayment = yearPayment;
-        this.countingOfActing = countingOfActing;
+        this.bonus = bonus;
         this.createAt = createAt;
         this.updateAt = updateAt;
+    }
+
+    public Contract(String id, Actor actor, Role role, int yearPayment, double bonus) {
+        this.id = id;
+        this.actor = actor;
+        this.role = role;
+        YearPayment = yearPayment;
+        this.bonus = bonus;
     }
 
     public Actor getActor() {
@@ -46,14 +56,6 @@ public class Contract  {
 
     public void setRole(Role role) {
         this.role = role;
-    }
-
-    public int getCountingOfActing() {
-        return countingOfActing;
-    }
-
-    public void setCountingOfActing(int countingOfActing) {
-        this.countingOfActing = countingOfActing;
     }
 
     public LocalDateTime getCreateAt() {
