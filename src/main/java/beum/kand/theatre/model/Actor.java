@@ -11,14 +11,13 @@ public class Actor {
     private String rank;
     private int expYear;
     private String discription;
-    private LocalDateTime createAt;
-    private LocalDateTime updateAt;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
     public Actor() {
     }
 
-    public Actor(String id, String firstName, String secondName, String surname, String rank, int expYear, String discription) {
-        this.id = id;
+    public Actor(String firstName, String secondName, String surname, String rank, int expYear, String discription) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.surname = surname;
@@ -27,7 +26,7 @@ public class Actor {
         this.discription = discription;
     }
 
-    public Actor(String id, String firstName, String secondName, String surname, String rank, int expYear, String discription, LocalDateTime createAt, LocalDateTime updateAt) {
+    public Actor(String id, String firstName, String secondName, String surname, String rank, int expYear, String discription, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.firstName = firstName;
         this.secondName = secondName;
@@ -35,8 +34,16 @@ public class Actor {
         this.rank = rank;
         this.expYear = expYear;
         this.discription = discription;
-        this.createAt = createAt;
-        this.updateAt = updateAt;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+    }
+
+    public String getDiscription() {
+        return discription;
+    }
+
+    public void setDiscription(String discription) {
+        this.discription = discription;
     }
 
     public String getId() {
@@ -87,20 +94,20 @@ public class Actor {
         this.expYear = expYear;
     }
 
-    public LocalDateTime getCreateAt() {
-        return createAt;
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreateAt(LocalDateTime createAt) {
-        this.createAt = createAt;
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
     }
 
-    public LocalDateTime getUpdateAt() {
-        return updateAt;
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
     }
 
-    public void setUpdateAt(LocalDateTime updateAt) {
-        this.updateAt = updateAt;
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
     @Override

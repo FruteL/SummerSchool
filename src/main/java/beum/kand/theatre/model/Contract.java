@@ -11,8 +11,8 @@ public class Contract  {
     private int YearPayment;
     private double bonus;
     private String description;
-    private LocalDateTime createAt;
-    private LocalDateTime updateAt;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
     public Contract() {
     }
@@ -26,15 +26,15 @@ public class Contract  {
         this.description = description;
     }
 
-    public Contract(String id, Actor actor, Role role, int yearPayment, double bonus, String description, LocalDateTime createAt, LocalDateTime updateAt) {
+    public Contract(String id, Actor actor, Role role, int yearPayment, double bonus, String description, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.actor = actor;
         this.role = role;
         YearPayment = yearPayment;
         this.bonus = bonus;
         this.description = description;
-        this.createAt = createAt;
-        this.updateAt = updateAt;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
     public Actor getActor() {
@@ -61,20 +61,20 @@ public class Contract  {
         this.role = role;
     }
 
-    public LocalDateTime getCreateAt() {
-        return createAt;
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreateAt(LocalDateTime createAt) {
-        this.createAt = createAt;
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
     }
 
-    public LocalDateTime getUpdateAt() {
-        return updateAt;
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
     }
 
-    public void setUpdateAt(LocalDateTime updateAt) {
-        this.updateAt = updateAt;
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
 

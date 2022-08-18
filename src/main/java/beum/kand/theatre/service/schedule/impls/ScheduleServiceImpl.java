@@ -4,10 +4,12 @@ import beum.kand.theatre.model.Schedule;
 import beum.kand.theatre.repository.schedule.ScheduleMongoRepository;
 import beum.kand.theatre.service.schedule.interfaces.IScheduleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Service
 public class ScheduleServiceImpl implements IScheduleService {
     @Autowired
     ScheduleMongoRepository repository;
@@ -19,7 +21,7 @@ public class ScheduleServiceImpl implements IScheduleService {
 
     @Override
     public Schedule update(Schedule schedule) {
-        schedule.setUpdateAt(LocalDateTime.now());
+        schedule.setUpdatedAt(LocalDateTime.now());
         return repository.save(schedule);
     }
 

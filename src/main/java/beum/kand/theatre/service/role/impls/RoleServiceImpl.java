@@ -4,10 +4,12 @@ import beum.kand.theatre.model.Role;
 import beum.kand.theatre.repository.role.RoleMongoRepository;
 import beum.kand.theatre.service.role.interfaces.IRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Service
 public class RoleServiceImpl implements IRoleService {
     @Autowired
     RoleMongoRepository repository;
@@ -19,7 +21,7 @@ public class RoleServiceImpl implements IRoleService {
 
     @Override
     public Role update(Role role) {
-        role.setUpdateAt(LocalDateTime.now());
+        role.setUpdatedAt(LocalDateTime.now());
         return repository.save(role);
     }
 

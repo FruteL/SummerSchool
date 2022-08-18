@@ -2,13 +2,14 @@ package beum.kand.theatre.service.contract.impls;
 
 import beum.kand.theatre.model.Contract;
 import beum.kand.theatre.repository.contract.ContractMongoRepository;
-import beum.kand.theatre.repository.item.ItemMongoRepository;
 import beum.kand.theatre.service.contract.interfaces.IContractService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Service
 public class ContractServiceImpl implements IContractService {
 
     @Autowired
@@ -16,13 +17,13 @@ public class ContractServiceImpl implements IContractService {
 
     @Override
     public Contract create(Contract contract) {
-        contract.setCreateAt(LocalDateTime.now());
+        contract.setCreatedAt(LocalDateTime.now());
         return repository.save(contract);
     }
 
     @Override
     public Contract update(Contract contract) {
-        contract.setUpdateAt(LocalDateTime.now());
+        contract.setUpdatedAt(LocalDateTime.now());
         return repository.save(contract);
     }
 

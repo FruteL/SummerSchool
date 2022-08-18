@@ -1,9 +1,7 @@
 package beum.kand.theatre.model;
 
 import java.time.LocalDateTime;
-import java.util.Hashtable;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 
 public class Performance {
@@ -14,8 +12,8 @@ public class Performance {
     private List<Role> roles;
     private int budget;
     private String description;
-    private LocalDateTime createAt;
-    private LocalDateTime updateAt;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
     public Performance() {
     }
@@ -29,31 +27,31 @@ public class Performance {
         this.description = description;
     }
 
-    public Performance(String id, String name, LocalDateTime date, List<Role> roles, int budget, String description, LocalDateTime createAt, LocalDateTime updateAt) {
+    public Performance(String id, String name, LocalDateTime date, List<Role> roles, int budget, String description, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.name = name;
         this.date = date;
         this.roles = roles;
         this.budget = budget;
         this.description = description;
-        this.createAt = createAt;
-        this.updateAt = updateAt;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
-    public LocalDateTime getCreateAt() {
-        return createAt;
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreateAt(LocalDateTime createAt) {
-        this.createAt = createAt;
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
     }
 
-    public LocalDateTime getUpdateAt() {
-        return updateAt;
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
     }
 
-    public void setUpdateAt(LocalDateTime updateAt) {
-        this.updateAt = updateAt;
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
     public String getId() {

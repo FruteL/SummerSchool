@@ -9,7 +9,7 @@ private String roleName;
 private String description;
 private String text;
 private LocalDateTime createdAt;
-private LocalDateTime updateAt;
+private LocalDateTime updatedAt;
 
     public Role() {
     }
@@ -21,13 +21,13 @@ private LocalDateTime updateAt;
         this.text = text;
     }
 
-    public Role(String id, String roleName, String description, String text, LocalDateTime createdAt, LocalDateTime updateAt) {
+    public Role(String id, String roleName, String description, String text, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.roleName = roleName;
         this.description = description;
         this.text = text;
         this.createdAt = createdAt;
-        this.updateAt = updateAt;
+        this.updatedAt = updatedAt;
     }
 
     @Override
@@ -51,7 +51,7 @@ private LocalDateTime updateAt;
                 ", description='" + description + '\'' +
                 ", text='" + text + '\'' +
                 ", createdAt=" + createdAt +
-                ", updateAt=" + updateAt +
+                ", updateAt=" + updatedAt +
                 '}';
     }
 
@@ -95,11 +95,11 @@ private LocalDateTime updateAt;
         this.createdAt = createdAt;
     }
 
-    public LocalDateTime getUpdateAt() {
-        return updateAt;
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
     }
 
-    public void setUpdateAt(LocalDateTime updateAt) {
-        this.updateAt = updateAt;
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }

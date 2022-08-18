@@ -1,17 +1,15 @@
 package beum.kand.theatre.service.perfomance.impls;
 
 import beum.kand.theatre.model.Performance;
-import beum.kand.theatre.model.Role;
-import beum.kand.theatre.repository.item.ItemMongoRepository;
 import beum.kand.theatre.repository.performance.PerformanceMongoRepository;
-import beum.kand.theatre.repository.role.RoleMongoRepository;
 import beum.kand.theatre.service.perfomance.interfaces.IPerformanceService;
-import beum.kand.theatre.service.role.interfaces.IRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Service
 public class PerformanceServiceImpl implements IPerformanceService {
 
     @Autowired
@@ -19,13 +17,13 @@ public class PerformanceServiceImpl implements IPerformanceService {
 
     @Override
     public Performance create(Performance performance) {
-        performance.setCreateAt(LocalDateTime.now());
+        performance.setCreatedAt(LocalDateTime.now());
         return repository.save(performance);
     }
 
     @Override
     public Performance update(Performance performance) {
-        performance.setUpdateAt(LocalDateTime.now());
+        performance.setUpdatedAt(LocalDateTime.now());
         return repository.save(performance);
     }
 

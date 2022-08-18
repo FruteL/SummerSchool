@@ -13,7 +13,7 @@ public class Schedule {
     private int holdPlaces;
     private String description;
     private LocalDateTime createdAt;
-    private LocalDateTime updateAt;
+    private LocalDateTime updatedAt;
 
     public Schedule() {
     }
@@ -28,7 +28,7 @@ public class Schedule {
         this.description = description;
     }
 
-    public Schedule(String id, Performance performance, List<Actor> actors, LocalDateTime date, double price, int holdPlaces, String description, LocalDateTime createdAt, LocalDateTime updateAt) {
+    public Schedule(String id, Performance performance, List<Actor> actors, LocalDateTime date, double price, int holdPlaces, String description, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.performance = performance;
         this.actors = actors;
@@ -37,7 +37,7 @@ public class Schedule {
         this.holdPlaces = holdPlaces;
         this.description = description;
         this.createdAt = createdAt;
-        this.updateAt = updateAt;
+        this.updatedAt = updatedAt;
     }
 
     public String getId() {
@@ -96,12 +96,12 @@ public class Schedule {
         this.createdAt = createdAt;
     }
 
-    public LocalDateTime getUpdateAt() {
-        return updateAt;
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
     }
 
-    public void setUpdateAt(LocalDateTime updateAt) {
-        this.updateAt = updateAt;
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
     @Override
@@ -114,7 +114,7 @@ public class Schedule {
                 ", price=" + price +
                 ", holdPlaces=" + holdPlaces +
                 ", createdAt=" + createdAt +
-                ", updateAt=" + updateAt +
+                ", updateAt=" + updatedAt +
                 '}';
     }
 
