@@ -1,39 +1,46 @@
 package beum.kand.theatre.service.perfomance.impls;
 
+import beum.kand.theatre.model.Performance;
 import beum.kand.theatre.model.Role;
 import beum.kand.theatre.repository.item.ItemMongoRepository;
+import beum.kand.theatre.repository.performance.PerformanceMongoRepository;
 import beum.kand.theatre.repository.role.RoleMongoRepository;
+import beum.kand.theatre.service.perfomance.interfaces.IPerformanceService;
 import beum.kand.theatre.service.role.interfaces.IRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
-public class PerformanceServiceImpl implements IRoleService {
+public class PerformanceServiceImpl implements IPerformanceService {
 
     @Autowired
-    RoleMongoRepository repository;
+    PerformanceMongoRepository repository;
+
     @Override
-    public Role create(Role role) {
-        return null;
+    public Performance create(Performance performance) {
+        performance.setCreateAt(LocalDateTime.now());
+        return repository.save(performance);
     }
 
     @Override
-    public Role update(Role role) {
-        return null;
+    public Performance update(Performance performance) {
+        performance.setUpdateAt(LocalDateTime.now());
+        return repository.save(performance);
     }
 
     @Override
-    public Role get(String id) {
-        return null;
+    public Performance get(String id) {
+        return repository.findById(id).get();
     }
 
     @Override
     public void delete(String id) {
-
+        repository.deleteById(id);
     }
 
     @Override
-    public List<Role> getAll() {
-        return null;
+    public List<Performance> getAll() {
+        return repository.findAll();
     }
 }

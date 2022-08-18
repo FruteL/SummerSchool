@@ -10,28 +10,31 @@ public class Actor {
     private String surname;
     private String rank;
     private int expYear;
+    private String discription;
     private LocalDateTime createAt;
     private LocalDateTime updateAt;
 
     public Actor() {
     }
 
-    public Actor(String id, String firstName, String secondName, String surname, String rank, int expYear) {
+    public Actor(String id, String firstName, String secondName, String surname, String rank, int expYear, String discription) {
         this.id = id;
         this.firstName = firstName;
         this.secondName = secondName;
         this.surname = surname;
         this.rank = rank;
         this.expYear = expYear;
+        this.discription = discription;
     }
 
-    public Actor(String id, String firstName, String secondName, String surname, String rank, int expYear, LocalDateTime createAt, LocalDateTime updateAt) {
+    public Actor(String id, String firstName, String secondName, String surname, String rank, int expYear, String discription, LocalDateTime createAt, LocalDateTime updateAt) {
         this.id = id;
         this.firstName = firstName;
         this.secondName = secondName;
         this.surname = surname;
         this.rank = rank;
         this.expYear = expYear;
+        this.discription = discription;
         this.createAt = createAt;
         this.updateAt = updateAt;
     }

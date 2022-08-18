@@ -1,33 +1,40 @@
 package beum.kand.theatre.service.schedule.impls;
 
 import beum.kand.theatre.model.Schedule;
+import beum.kand.theatre.repository.schedule.ScheduleMongoRepository;
 import beum.kand.theatre.service.schedule.interfaces.IScheduleService;
+import org.springframework.beans.factory.annotation.Autowired;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class ScheduleServiceImpl implements IScheduleService {
+    @Autowired
+    ScheduleMongoRepository repository;
     @Override
     public Schedule create(Schedule schedule) {
-        return null;
+        schedule.setCreatedAt(LocalDateTime.now());
+        return repository.save(schedule);
     }
 
     @Override
     public Schedule update(Schedule schedule) {
-        return null;
+        schedule.setUpdateAt(LocalDateTime.now());
+        return repository.save(schedule);
     }
 
     @Override
     public Schedule get(String id) {
-        return null;
+        return repository.findById(id).get();
     }
 
     @Override
     public void delete(String id) {
-
+        repository.deleteById(id);
     }
 
     @Override
     public List<Schedule> getAll() {
-        return null;
+        return repository.findAll();
     }
 }

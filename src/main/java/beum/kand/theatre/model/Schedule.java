@@ -11,28 +11,31 @@ public class Schedule {
     private LocalDateTime date;
     private double price;
     private int holdPlaces;
+    private String description;
     private LocalDateTime createdAt;
     private LocalDateTime updateAt;
 
     public Schedule() {
     }
 
-    public Schedule(String id, Performance performance, List<Actor> actors, LocalDateTime date, double price, int holdPlaces) {
+    public Schedule(String id, Performance performance, List<Actor> actors, LocalDateTime date, double price, int holdPlaces, String description) {
         this.id = id;
         this.performance = performance;
         this.actors = actors;
         this.date = date;
         this.price = price;
         this.holdPlaces = holdPlaces;
+        this.description = description;
     }
 
-    public Schedule(String id, Performance performance, List<Actor> actors, LocalDateTime date, double price, int holdPlaces, LocalDateTime createdAt, LocalDateTime updateAt) {
+    public Schedule(String id, Performance performance, List<Actor> actors, LocalDateTime date, double price, int holdPlaces, String description, LocalDateTime createdAt, LocalDateTime updateAt) {
         this.id = id;
         this.performance = performance;
         this.actors = actors;
         this.date = date;
         this.price = price;
         this.holdPlaces = holdPlaces;
+        this.description = description;
         this.createdAt = createdAt;
         this.updateAt = updateAt;
     }

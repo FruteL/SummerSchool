@@ -13,30 +13,32 @@ public class Performance {
     private LocalDateTime date; //year
     private List<Role> roles;
     private int budget;
+    private String description;
     private LocalDateTime createAt;
     private LocalDateTime updateAt;
 
     public Performance() {
     }
 
-    public Performance(String id, String name, LocalDateTime date, List<Role> roles, int budget) {
+    public Performance(String id, String name, LocalDateTime date, List<Role> roles, int budget, String description) {
         this.id = id;
         this.name = name;
         this.date = date;
         this.roles = roles;
         this.budget = budget;
+        this.description = description;
     }
 
-    public Performance(String id, String name, LocalDateTime date, List<Role> roles, int budget, LocalDateTime createAt, LocalDateTime updateAt) {
+    public Performance(String id, String name, LocalDateTime date, List<Role> roles, int budget, String description, LocalDateTime createAt, LocalDateTime updateAt) {
         this.id = id;
         this.name = name;
         this.date = date;
         this.roles = roles;
         this.budget = budget;
+        this.description = description;
         this.createAt = createAt;
         this.updateAt = updateAt;
     }
-
 
     public LocalDateTime getCreateAt() {
         return createAt;

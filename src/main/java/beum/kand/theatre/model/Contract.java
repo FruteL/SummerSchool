@@ -10,28 +10,31 @@ public class Contract  {
     private Role role;
     private int YearPayment;
     private double bonus;
+    private String description;
     private LocalDateTime createAt;
     private LocalDateTime updateAt;
 
     public Contract() {
     }
 
-    public Contract(String id, Actor actor, Role role, int yearPayment, double bonus, LocalDateTime createAt, LocalDateTime updateAt) {
+    public Contract(String id, Actor actor, Role role, int yearPayment, double bonus, String description) {
         this.id = id;
         this.actor = actor;
         this.role = role;
         YearPayment = yearPayment;
         this.bonus = bonus;
-        this.createAt = createAt;
-        this.updateAt = updateAt;
+        this.description = description;
     }
 
-    public Contract(String id, Actor actor, Role role, int yearPayment, double bonus) {
+    public Contract(String id, Actor actor, Role role, int yearPayment, double bonus, String description, LocalDateTime createAt, LocalDateTime updateAt) {
         this.id = id;
         this.actor = actor;
         this.role = role;
         YearPayment = yearPayment;
         this.bonus = bonus;
+        this.description = description;
+        this.createAt = createAt;
+        this.updateAt = updateAt;
     }
 
     public Actor getActor() {
