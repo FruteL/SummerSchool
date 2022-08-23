@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Actors List</title>
+    <title>Performances List</title>
     <style>
         .table-center {
             display: flex;
@@ -17,28 +17,26 @@
         <table class="table table-striped table-hover">
             <thead>
             <th> ID </th>
-            <th> FirstName </th>
-            <th> LastName </th>
-            <th> Surname </th>
-            <th> Rank </th>
-            <th> Experience </th>
+            <th> Name </th>
+            <th> Date </th>
+            <th> Roles </th>
+            <th> Budget </th>
             <th> Description</th>
             <th> Created At</th>
             <th> Updated At</th>
 
             </thead>
             <tbody
-            <#list actors as actor >
+            <#list performances as performance >
                 <tr>
-                    <td>${actor.id}</td>
-                    <td>${actor.firstName}</td>
-                    <td>${actor.secondName}</td>
-                    <td>${actor.surname}</td>
-                    <td>${actor.rank?if_exists}</td>
-                    <td>${actor.expYear}</td>
-                    <td>${actor.discription?if_exists}</td>
-                    <td>${actor.createdAt}</td>
-                    <td>${actor.updatedAt?if_exists}</td>
+                    <td>${performance.id}</td>
+                    <td>${performance.name}</td>
+                    <td>${performance.date}</td>
+                    <td>${performance.roles}</td>
+                    <td>${performance.budjet}</td>
+                    <td>${performance.description?if_exists}</td>
+                    <td>${performance.createdAt}</td>
+                    <td>${performance.updatedAt?if_exists}</td>
                 </tr>
             </#list>
             </tbody>
@@ -47,5 +45,6 @@
         </table>
     </div>
 </div>
+
 </body>
 </html>
