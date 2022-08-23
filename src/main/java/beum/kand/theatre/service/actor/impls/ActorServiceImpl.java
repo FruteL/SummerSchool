@@ -19,18 +19,18 @@ public class ActorServiceImpl implements IActorService {
     ActorMongoRepository repository;
 
     private LocalDateTime now = LocalDateTime.now();
-    private List<Actor> actors = new ArrayList<>(
-            Arrays.asList(
-                    new Actor("1", "Pavlo","Kandieiv","Alexandrovich", "People's Artist of Ukraine", 12, "Описание", now, now),
-                    new Actor("2", "Petro","Petrov","Sergiyovich", "People's Artist of Ukraine", 9, "Описание", now, now),
-                    new Actor("3", "Ivan","Ivanov","Ivanovich", "Artist of Ukraine", 4, "Описание", now, now),
-                    new Actor("4", "Dmitry","Dmitrov","Dmitrovich", "newbi", 1, "Описание", now, now)
-                    ));
-
-    @PostConstruct
-    void init(){
-        repository.saveAll(actors);
-    }
+//    private List<Actor> actors = new ArrayList<>(
+//            Arrays.asList(
+//                    new Actor("1", "Pavlo","Kandieiv","Alexandrovich", "People's Artist of Ukraine", 12, "Описание", now, now),
+//                    new Actor("2", "Petro","Petrov","Sergiyovich", "People's Artist of Ukraine", 9, "Описание", now, now),
+//                    new Actor("3", "Ivan","Ivanov","Ivanovich", "Artist of Ukraine", 4, "Описание", now, now),
+//                    new Actor("4", "Dmitry","Dmitrov","Dmitrovich", "newbi", 1, "Описание", now, now)
+//                    ));
+//
+//    @PostConstruct
+//    void init(){
+//        repository.saveAll(actors);
+//    }
     @Override
     public Actor create(Actor actor) {
         actor.setCreatedAt(LocalDateTime.now());
