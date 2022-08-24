@@ -25,7 +25,8 @@
             <th> Description</th>
             <th> Created At</th>
             <th> Updated At</th>
-
+            <th> DELETE</th>
+            <th> EDIT</th>
             </thead>
             <tbody
             <#list actors as actor >
@@ -39,6 +40,8 @@
                     <td>${actor.discription?if_exists}</td>
                     <td>${actor.createdAt}</td>
                     <td>${actor.updatedAt?if_exists}</td>
+                    <td><a href="/ui/actors/del/${actor.id}"><button type="button" class="btn btn-danger">Del</button></a></td>
+                    <td><a href="/ui/actors/edit/${actor.id}"><button type="button" class="btn btn-info">Edit</button></a></td>
                 </tr>
             </#list>
             </tbody>

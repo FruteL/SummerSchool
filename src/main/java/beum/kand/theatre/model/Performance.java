@@ -8,8 +8,7 @@ public class Performance {
 
     private String id;
     private String name;
-    private LocalDateTime date; //year
-    private List<Role> roles;
+    private int date; //year
     private int budget;
     private String description;
     private LocalDateTime createdAt;
@@ -18,20 +17,17 @@ public class Performance {
     public Performance() {
     }
 
-    public Performance(String id, String name, LocalDateTime date, List<Role> roles, int budget, String description) {
-        this.id = id;
+    public Performance(String name, int date, int budget, String description) {
         this.name = name;
         this.date = date;
-        this.roles = roles;
         this.budget = budget;
         this.description = description;
     }
 
-    public Performance(String id, String name, LocalDateTime date, List<Role> roles, int budget, String description, LocalDateTime createdAt, LocalDateTime updatedAt) {
+    public Performance(String id, String name, int date, int budget, String description, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.name = name;
         this.date = date;
-        this.roles = roles;
         this.budget = budget;
         this.description = description;
         this.createdAt = createdAt;
@@ -70,12 +66,20 @@ public class Performance {
         this.name = name;
     }
 
-    public LocalDateTime getDate() {
+    public int getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(int date) {
         this.date = date;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public int getBudget() {

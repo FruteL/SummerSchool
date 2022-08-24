@@ -6,6 +6,8 @@ import java.util.Objects;
 public class Role {
 private String id;
 private String roleName;
+private Performance performance;
+
 private String description;
 private String text;
 private LocalDateTime createdAt;
@@ -14,20 +16,29 @@ private LocalDateTime updatedAt;
     public Role() {
     }
 
-    public Role(String id, String roleName, String description, String text) {
-        this.id = id;
+    public Role(String roleName, Performance performance, String description, String text) {
         this.roleName = roleName;
+        this.performance = performance;
         this.description = description;
         this.text = text;
     }
 
-    public Role(String id, String roleName, String description, String text, LocalDateTime createdAt, LocalDateTime updatedAt) {
+    public Role(String id, String roleName, Performance performance, String description, String text, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.roleName = roleName;
+        this.performance = performance;
         this.description = description;
         this.text = text;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
+    }
+
+    public Performance getPerformance() {
+        return performance;
+    }
+
+    public void setPerformance(Performance performance) {
+        this.performance = performance;
     }
 
     @Override
