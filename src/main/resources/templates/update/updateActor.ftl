@@ -22,9 +22,11 @@
             <br>
             expYear: <@spring.formInput "form.expYear" "" "text" />
             <br>
-            created :<@spring.formInput "form.createdAt" "" "date" />
+            Description: <@spring.formInput "form.discription" "" "text" />
             <br>
-            updated :<@spring.formInput "form.updatedAt" "" "date" />
+            created :<@spring.formInput "form.createdAt" "" "text" />
+            <br>
+            updated :<@spring.formInput "form.updatedAt" "" "text" />
             <br>
 
             <input type="submit" value="Save">

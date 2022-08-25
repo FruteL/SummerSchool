@@ -19,11 +19,13 @@
             <th> ID </th>
             <th> Name </th>
             <th> Date </th>
-            <th> Roles </th>
             <th> Budget </th>
             <th> Description</th>
             <th> Created At</th>
             <th> Updated At</th>
+            <th> ALL ROLES </th>
+            <th> DELETE</th>
+            <th> EDIT</th>
 
             </thead>
             <tbody
@@ -32,11 +34,14 @@
                     <td>${performance.id}</td>
                     <td>${performance.name}</td>
                     <td>${performance.date}</td>
-                    <td>${performance.roles}</td>
-                    <td>${performance.budjet}</td>
+                    <td>${performance.budget}</td>
                     <td>${performance.description?if_exists}</td>
                     <td>${performance.createdAt}</td>
                     <td>${performance.updatedAt?if_exists}</td>
+                    <td><a href="/ui/performances/roles/${performance.id}"><button type="button" class="btn btn-light">roles list</button></a></td>
+                    <td><a href="/ui/performances/del/${performance.id}"><button type="button" class="btn btn-danger">Del</button></a></td>
+                    <td><a href="/ui/performances/edit/${performance.id}"><button type="button" class="btn btn-info">Edit</button></a></td>
+
                 </tr>
             </#list>
             </tbody>

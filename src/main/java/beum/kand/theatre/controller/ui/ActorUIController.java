@@ -3,14 +3,12 @@ package beum.kand.theatre.controller.ui;
 import beum.kand.theatre.form.ActorForm;
 import beum.kand.theatre.model.Actor;
 import beum.kand.theatre.service.actor.impls.ActorServiceImpl;
-import beum.kand.theatre.service.item.impls.ItemServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
+
+import java.time.LocalDateTime;
 
 @RequestMapping("/ui/actors/")
 @Controller
@@ -38,10 +36,27 @@ public class ActorUIController {
         actorForm.setSecondName(actorToUpdate.getSecondName());
         actorForm.setSurname(actorToUpdate.getSurname());
         actorForm.setRank(actorToUpdate.getRank());
+        actorForm.setDiscription(actorToUpdate.getDiscription());
         actorForm.setExpYear(actorToUpdate.getExpYear());
         actorForm.setUpdatedAt(actorToUpdate.getUpdatedAt());
         actorForm.setCreatedAt(actorToUpdate.getCreatedAt());
         model.addAttribute("form", actorForm);
-        return "updateActor";
+        return "update/updateActor";
+    }
+    @RequestMapping(value = "/edit/{id}", method = RequestMethod.POST)
+    public String updateActor( @ModelAttribute("form") ActorForm form){
+        Actor actorToUpdate = new Actor();
+        actorToUpdate.setId(form.getId());
+        actorToUpdate.setFirstName(form.getFirstName());
+        actorToUpdate.setSecondName(form.getSecondName());
+        actorToUpdate.setSurname(form.getSurname());
+        actorToUpdate.setRank(form.getRank());
+        actorToUpdate.setDiscription(form.getDiscription());
+        actorToUpdate.setExpYear(form.getExpYear());
+        actorToUpdate.setCreatedAt(form.getCreatedAt());
+        actorToUpdate.setUpdatedAt(LocalDateTime.now());
+        service.update(actorToUpdate);
+
+        return "redirect:/ui/actors/";
     }
 }

@@ -56,6 +56,14 @@ public class Schedule {
         this.performance = performance;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public List<Actor> getActors() {
         return actors;
     }

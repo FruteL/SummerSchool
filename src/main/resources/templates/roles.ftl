@@ -18,6 +18,7 @@
             <thead>
             <th> ID </th>
             <th> Role Name </th>
+            <th> Performance </th>
             <th> Description</th>
             <th> Text </th>
             <th> Created At</th>
@@ -25,10 +26,11 @@
 
             </thead>
             <tbody
-            <#list rolse as role >
+            <#list roles as role >
                 <tr>
                     <td>${role.id}</td>
                     <td>${role.roleName}</td>
+                    <td>${role.performance.name}</td>
                     <td>${role.description?if_exists}</td>
                     <td>${role.text}</td>
                     <td>${role.createdAt}</td>

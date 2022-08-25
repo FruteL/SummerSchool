@@ -31,8 +31,8 @@
             <#list schedules as schedule >
                 <tr>
                     <td>${schedule.id}</td>
-                    <td>${schedule.performance}</td>
-                    <td>${schedule.actors}</td>
+                    <td>${schedule.performance.name}</td>
+                    <td><a href="/ui/actors/"><button type="button" class="btn btn-light">Actors</button></a></td>
                     <td>${schedule.date}</td>
                     <td>${schedule.price}</td>
                     <td>${schedule.holdPlaces}</td>
